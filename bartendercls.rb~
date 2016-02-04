@@ -10,7 +10,7 @@ class Bartender < Person
   end
 ​
   def serve(customer)
-    say "There ya go.."
+    say "There you go.."
     customer.take_beer(Beer.new)
   end
 end

@@ -4,7 +4,7 @@ class Customer < Person
     @beers_had = []
     @amount_drank = 0
   end
-​
+
   def what_is_your_name
     if drunk?
       say "Hic!"
@@ -12,20 +12,20 @@ class Customer < Person
       super
     end
   end
-​
-  def drunk? # ? returns True/False
+
+  def drunk?
     @amount_drank > 2000
   end
-​
+
   def take_beer(beer)
     if has_beer?
-      say "I'm good, thanks!"
+      say "I'm good!"
     else
       say "Cheers!"
       @beers_had << beer
     end
   end
-​
+
   def drink!
     if has_beer?
       amount_before = current_beer.amount
@@ -36,12 +36,13 @@ class Customer < Person
       say "Oh no! Hit me again!"
     end
   end
-​
-  def has_beer? # ? returns True/False
+
+  def has_beer?
     current_beer && current_beer.amount > 0
   end
-​
+
   def current_beer
     @beers_had.last
   end
 end
+

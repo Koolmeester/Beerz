@@ -19,7 +19,7 @@ class Customer < Person
 ​
   def take_beer(beer)
     if has_beer?
-      say "I still have beer!"
+      say "I'm good, thanks!"
     else
       say "Cheers!"
       @beers_had << beer
